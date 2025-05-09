@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="bg-cover bg-no-repeat bg-center h-screen"
+    style="background-image: url('./src/assets/images/bgCarton.jpg')"
+  >
+    <header
+      class="flex items-center justify-between bg-white p-3 text-[#3e721d] rounded-xl shadow-lg relative z-10"
+    >
+      <div id="siteName" class="flex items-center space-x-2">
+        <span class="text-[#3e721d] font-bold text-2xl">GreenCycle</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="2rem"
+          viewBox="0 -960 960 960"
+          width="2rem"
+          fill="#75FB4C"
+        >
+          <path
+            d="m368-592 89-147-59-98q-12-20-34.5-20T329-837l-98 163 137 82Zm387 272-89-148 139-80 64 107q11 17 12 38t-9 39q-10 20-29.5 32T800-320h-45ZM640-40 480-200l160-160v80h190l-58 116q-11 20-30 32t-42 12h-60v80Zm-387-80q-20 0-36.5-10.5T192-158q-8-16-7.5-33.5T194-224l34-56h172v160H253Zm-99-114L89-364q-9-18-8.5-38.5T92-441l16-27-68-41 219-55 55 220-69-42-91 152Zm540-342-219-55 69-41-125-208h141q21 0 39.5 10.5T629-841l52 87 68-42-55 220Z"
+          />
+        </svg>
+      </div>
+
+      <!-- Full nav for landscape -->
+      <div
+        class="flex items-center justify-end landscape:flex portrait:hidden"
+        id="links"
+      >
+        <p class="m-3 text-[1.5rem] cursor-pointer">Home</p>
+        <p class="m-3 text-[1.5rem] cursor-pointer">Recycled</p>
+        <p class="m-3 text-[1.5rem] cursor-pointer">Profile</p>
+        <p class="m-3 text-[1.5rem] cursor-pointer">Learn</p>
+      </div>
+
+      <!-- Burger menu for portrait -->
+      <div
+        class="portrait:flex landscape:hidden justify-end p-3"
+        id="burgerMenu"
+      >
+        <button class="text-3xl" id="burgerToggle">☰</button>
+      </div>
+
+      <!-- Mobile nav in portrait mode -->
+      <div
+        class="z-[999] hidden transition-all duration-300 ease-in-out flex-col items-center justify-around bg-[#000000dd] top-0 left-0 absolute h-[100vh] w-[100vw] portrait:flex landscape:hidden translate-x-[100%] text-[#c1ff72]"
+        id="mobileLinks"
+      >
+        <button class="self-start text-3xl m-5" id="closeBtn">✕</button>
+        <p
+          class="w-full text-center p-3 text-[1.5rem] cursor-pointer hover:bg-[#ffffff42]"
+        >
+          Home
+        </p>
+        <p
+          class="w-full text-center p-3 text-[1.5rem] cursor-pointer hover:bg-[#ffffff42]"
+        >
+          Recycled
+        </p>
+        <p
+          class="w-full text-center p-3 text-[1.5rem] cursor-pointer hover:bg-[#ffffff42]"
+        >
+          Profile
+        </p>
+        <p
+          class="w-full text-center p-3 text-[1.5rem] cursor-pointer hover:bg-[#ffffff42]"
+        >
+          Learn
+        </p>
+      </div>
+    </header>
+
+    <main
+      class="flex flex-col items-center justify-center h-full space-y-10 relative z-0"
+    >
+      <h1 class="text-[#c1ff72] font-bold text-center text-4xl">
+        Welcome to GreenCycle
+      </h1>
+      <img
+        class="w-[50%]"
+        src="./src/assets/images/systemLogo.png"
+        alt="GreenCycle Logo"
+        id="logo"
+      />
+      <button
+        class="bg-[#daff60] text-black font-bold py-3 px-6 rounded-lg cursor-pointer hover:bg-yellow-200 transition-all duration-300"
+        id="indexBtn"
+        onclick="window.location.href='signup.html'"
+      >
+        Start
+      </button>
+    </main>
+
+    <script src="./src/burger.js"></script>
+  </body>
+</html>
